@@ -11,3 +11,4 @@ ConfigSpace
 
 # add your requirements below this line
 git+https://github.com/mlindauer/GenericWrapper4AC.git
+git+https://github.com/mlindauer/SMAC3.git@development
