@@ -66,6 +66,14 @@ def optimize(optimizer, scenario, trajectory=None):
     print(dev_x)
     print(inc_x)
 
+    print('PAR10:', np.mean(inc_x), '/', np.mean(dev_x))
+    max_x = 1000.0
+    par1er = lambda xx: np.mean([(x / 10 if x == max_x else x) for x in xx])
+    print('PAR1 :', par1er(inc_x), '/', par1er(dev_x))
+    to_counter = lambda xx: len([x for x in xx if x == max_x])
+    print('TOs  :', to_counter(inc_x), '/', to_counter(dev_x))
+    print('wins :', len([i for i in range(len(dev_x)) if dev_x[i] > inc_x[i]]), '/', len(dev_x))
+
     fig, ax = plt.subplots()
     ax.scatter(dev_x, inc_x, marker="x")
     ax.set_xlabel("Default Configuration")
