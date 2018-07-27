@@ -13,3 +13,6 @@ The main executable file `runner.py` accepts no parameters, instead one can chan
 $ python runner.py
 ```
 The script will find a well-performing hyperparameter setting, evaluate it, and then generate a plot comparing it to the default parameters.
+
+## Results
+The BO algorithm reduces PAR10 to half, and PAR1 for 25%. The timouts are also half. Please refer to the figure `fig-bo.png`.
